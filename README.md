@@ -49,7 +49,7 @@ This can be used when you have multiple potential handlers or data sources to tr
 process the request; if it cannot, it passes the request to the next handler in the chain until one succeeds or the
 chain ends.
 
-[more information...](chain_of_responsibility_pattern/chain_of_responsibility_pattern.md)
+[more information...](chain_of_responsibility_pattern/README.md)
 
 ## Where to Use
 
