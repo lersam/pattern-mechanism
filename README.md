@@ -23,3 +23,4 @@ chain ends.
 
 You can use a proxy or wrapper class to dynamically select different algorithms (strategies) for making a call. If the
 primary strategy fails, the proxy can switch to a fallback strategy. 
+
