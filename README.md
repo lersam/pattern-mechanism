@@ -1,5 +1,3 @@
-[[TOC]]
-
 # Circuit Breaker Pattern
 
 This pattern is ideal for preventing cascading failures. If a service is consistently failing, the circuit breaker "
