@@ -15,5 +15,5 @@ primary strategy fails, the proxy can switch to a fallback strategy.
 
 ## Python Example
 Imagine a payment system that supports Credit Card and PayPal payments.
-[code ](strategy_pattern/payment_strategy.py)
+[code ](payment_strategy.py)
 ```python
