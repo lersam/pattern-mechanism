@@ -13,7 +13,7 @@ This pattern is ideal for preventing cascading failures. If a service is consist
 opens," quickly failing subsequent requests and redirecting them to a predefined fallback response (e.g., cached data or
 a default value). It only retries the primary service after a set period.
 
-[more information...](circuit_breaker_pattern/circuit_breaker_pattern.md)
+[more information...](circuit_breaker_pattern/README.md)
 
 ## Where to Use
 
@@ -32,7 +32,7 @@ automatically retries the failed request after a brief pause, increasing the wai
 backoff) to avoid overwhelming the failing service. Fallbacks are often used in conjunction with this pattern once the
 maximum number of retries is exhausted.
 
-[more information...](retry_pattern/retry_pattern.md)
+[more information...](retry_pattern/README.md)
 
 ## Where to Use
 
@@ -65,7 +65,7 @@ A pattern that enables selecting different algorithms or behaviors at runtime ba
 You can use a proxy or wrapper class to dynamically select different algorithms (strategies) for making a call. If the
 primary strategy fails, the proxy can switch to a fallback strategy.
 
-[more information...](strategy_pattern/strategy_pattern.md)
+[more information...](strategy_pattern/README.md)
 
 ## Where to Use
 
@@ -83,7 +83,7 @@ sending.
 The Outbox Pattern is useful in scenarios where you need to ensure reliable communication and data consistency between
 microservices, especially when using asynchronous messaging or event-driven architectures.
 
-[more information...](outbox_pattern/outbox_pattern.md)
+[more information...](outbox_pattern/README.md)
 
 ## Where to Use
 
