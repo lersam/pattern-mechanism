@@ -107,7 +107,7 @@ if __name__ == '__main__':
 
 ## Real-World Example: Payment System
 
-Imagine an e-commerce checkout system: [code ](payment_strategy.py)
+Imagine an e-commerce checkout system: [code ](shopping_cart.py)
 
 - **Strategy Interface:** ``PaymentStrategy`` with a method pay(amount).
 - **Concrete Strategies:** ``CreditCardPayment``, ``PayPalPayment``, and ``CryptoPayment``.
