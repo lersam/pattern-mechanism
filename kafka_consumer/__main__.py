@@ -10,19 +10,18 @@ async def main():
         auto_offset_reset="earliest",
     )
 
-    consumer = KafkaConsumer(config)
-    consumer.subscribe(["demo-topic"])
+    consumer = KafkaConsumer(config, topics=["demo-topic"])
+    await consumer.start()
 
     try:
         while True:
-            messages = await consumer.consume(num_messages=10, timeout=1.0)
-            for msg in messages:
-                if msg.error():
-                    print(f"Consumer error: {msg.error()}")
-                    continue
-                print(f"Received message: key={msg.key()}, value={msg.value()}, "
-                      f"topic={msg.topic()}, partition={msg.partition()}, "
-                      f"offset={msg.offset()}")
+            msg = await consumer.next_message()
+            print(
+                f"Received message: topic={msg.topic}, partition={msg.partition}, "
+                f"offset={msg.offset}, key={msg.key}, value={msg.value}, "
+                f"headers={msg.headers}, timestamp={msg.timestamp}"
+            )
+            await consumer.commit()
     except KeyboardInterrupt:
         pass
     finally:
